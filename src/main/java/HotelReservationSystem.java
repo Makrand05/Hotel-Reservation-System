@@ -1,5 +1,17 @@
 public class HotelReservationSystem {
-    public static void main(String[] args) {
-        System.out.println("Welcome in Hotel Reservation System");
+    String hotelName;
+    String CustomerType;
+    int rateForRegularCutomer;
+
+    public HotelReservationSystem() {
+
+    }
+
+    public void setName(String hotelName) {
+        this.hotelName=hotelName;
+    }
+
+    public void setRateForRegularCustomers(int rateForRegularCutomer) {
+        this.rateForRegularCutomer=rateForRegularCutomer;
     }
 }
