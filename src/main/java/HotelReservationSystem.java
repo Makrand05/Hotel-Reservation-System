@@ -1,17 +1,18 @@
-public class HotelReservationSystem {
-    String hotelName;
-    String CustomerType;
-    int rateForRegularCutomer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+public class HotelReservationSystem {
+
+
+    public static Map<String,Integer> hotelMap=new HashMap<>();
     public HotelReservationSystem() {
 
     }
 
-    public void setName(String hotelName) {
-        this.hotelName=hotelName;
+    public void setRateForRegularCustomers(String hotelType, int rate) {
+        hotelMap.put(hotelType,rate);
     }
 
-    public void setRateForRegularCustomers(int rateForRegularCutomer) {
-        this.rateForRegularCutomer=rateForRegularCutomer;
-    }
 }
