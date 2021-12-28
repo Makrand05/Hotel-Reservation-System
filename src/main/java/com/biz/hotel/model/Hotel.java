@@ -1,10 +1,9 @@
 package com.biz.hotel.model;
 
-import com.biz.hotel.HotelReservationSystem;
-
 public class Hotel {
     private String hotelName;
-    private int rate;
+    private int weekdayRate;
+    private int weekendRate;
 
     public String getHotelName() {
         return hotelName;
@@ -14,17 +13,34 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public int getRate() {
-        return rate;
+    public int getWeekdayRate() {
+        return weekdayRate;
     }
 
-    public void setRate(int rate) {
-        this.rate = rate;
+    public void setWeekdayRate(int weekdayRate) {
+        this.weekdayRate = weekdayRate;
     }
 
-    public Hotel(String hotelName, int rate) {
+    public int getWeekendRate() {
+        return weekendRate;
+    }
+
+    public void setWeekendRate(int weekendRate) {
+        this.weekendRate = weekendRate;
+    }
+
+    public Hotel(String hotelName, int weekdayRate, int weekendRate) {
         this.hotelName = hotelName;
-        this.rate = rate;
+        this.weekdayRate=weekdayRate;
+        this.weekendRate=weekendRate;
     }
 
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "hotelName='" + hotelName + '\'' +
+                ", weekdayRate=" + weekdayRate +
+                ", weekendRate=" + weekendRate +
+                '}';
+    }
 }

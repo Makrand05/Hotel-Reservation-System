@@ -9,9 +9,9 @@ public class HotelReservationSystem {
 
     public static void getCheaper(List<Hotel> hotelList, int dateCount) {
 
-     Hotel minRateHotel=hotelList.stream().min(Comparator.comparing(Hotel::getRate)).get();
-        System.out.println("Cheapest hotel :");
-        System.out.println("Hotel name "+minRateHotel.getHotelName()+", Total Rates : $"+minRateHotel.getRate()*dateCount);
+     Hotel minRateHotel=hotelList.stream().min(Comparator.comparing(Hotel::getWeekdayRate)).get();
+
+        System.out.println("Hotel name "+minRateHotel.getHotelName()+", Total Rates : $"+minRateHotel.getWeekdayRate()*dateCount);
 
     }
 }

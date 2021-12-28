@@ -9,9 +9,11 @@ public class Main {
     public static void main(String[] args) {
         //Use Case 1 add hotel name and hotel rates
         List<Hotel> hotelList=new ArrayList<>();
-        hotelList.add(new Hotel("Lakewood",110));
-        hotelList.add(new Hotel("Bridgewood",160));
-        hotelList.add(new Hotel("Ridgewood",220));
+
+        //added hotel in list by name with weekday and weekend day rates
+        hotelList.add(new Hotel("Lakewood",110,90));
+        hotelList.add(new Hotel("Bridgewood", 150, 50));
+        hotelList.add(new Hotel("Ridgewood", 220, 150));
 
         System.out.println(hotelList);
 
